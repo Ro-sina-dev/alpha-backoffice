@@ -1,9 +1,14 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+import { ElConfigProvider } from 'element-plus'
+import frFR from 'element-plus/es/locale/lang/fr'
+
+const locale = frFR
 </script>
 
 <template>
-  <RouterView />
+  <el-config-provider :locale="locale">
+    <router-view />
+  </el-config-provider>
 </template>
 
 <style>
@@ -13,13 +18,64 @@ import { RouterView } from 'vue-router'
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+html,
+body,
+#app {
+  height: 100%;
+  font-family:
+    'Poppins',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
 }
 
-#app {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Element Plus overrides */
+.el-card {
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.el-button {
+  border-radius: 8px;
+}
+
+.el-input__wrapper,
+.el-select__wrapper {
+  border-radius: 8px;
+}
+
+.el-table {
+  font-size: 14px;
+}
+
+.el-tag {
+  border-radius: 6px;
+}
+
+.el-dialog {
+  border-radius: 16px;
 }
 </style>

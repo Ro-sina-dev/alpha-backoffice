@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.2",
+    "axios": "^1.13.2",
     "chart.js": "^4.5.1",
     "element-plus": "^2.13.0",
     "pinia": "^3.0.4",

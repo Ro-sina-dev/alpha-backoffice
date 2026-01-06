@@ -46,3 +46,9 @@ npm run build
 ```sh
 npm run lint
 ```
+
+### Arreter les serveurs de developpement
+
+```sh
+lsof -ti:5173,5174,5175 | xargs kill -9
+```
